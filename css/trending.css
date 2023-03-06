@@ -1,0 +1,56 @@
+/* TRENDING */
+.trending .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.trending .wrapper .col {
+  display: grid;
+  gap: 20px;
+}
+.trending .trend {
+  position: relative;
+  border-radius: var(--rad);
+  overflow: hidden;
+}
+.trending .trend .banner,
+.trending .trend .info {
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  text-transform: capitalize;
+  position: absolute;
+  z-index: 10;
+}
+.trending .trend .banner {
+  font-size: var(--fs-sm);
+  padding: 6px 12px;
+  border-bottom-right-radius: inherit;
+  top: 0;
+  left: 0;
+}
+.trending .trend .info {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: var(--transition);
+}
+.trending .trend:hover .info {
+  transform: translateY(0);
+}
+.trending .trend .info a {
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-md);
+}
+.trending .trend img {
+  width: 100%;
+  transition: var(--transition);
+}
+.trending .trend:hover img {
+  transform: scale(1.05);
+}
